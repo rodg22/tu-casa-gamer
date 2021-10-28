@@ -173,7 +173,7 @@ export default function NavBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            TU CASA GAMER
           </Typography>
           <Search>
             <SearchIconWrapper>
@@ -231,3 +231,4 @@ export default function NavBar() {
     </Box>
   );
 }
+
