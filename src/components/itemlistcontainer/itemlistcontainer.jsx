@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ItemCount from '../itemcount/itemcount';
 
 class ItemListContainer extends Component {
     // constructor(props) {
@@ -12,9 +13,14 @@ class ItemListContainer extends Component {
         return (
             <div>
                 <h1>{this.props.greeting}</h1>
+                <ItemCount 
+                    stock={5}
+                    initial={1}
+                />
             </div>
         )
     }
 }
  
 export default ItemListContainer;
+
