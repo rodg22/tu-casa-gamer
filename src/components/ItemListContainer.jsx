@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ItemCount from '../itemcount/itemcount';
+import ItemCount from './ItemCount';
 
 class ItemListContainer extends Component {
     // constructor(props) {
