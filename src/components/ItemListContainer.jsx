@@ -1,26 +1,29 @@
-import { Component } from 'react';
+import {useState, useEffect} from "react";
+import getProducts from '../services/ItemPromise'
 import ItemCount from './ItemCount';
+import ItemList from './ItemList';
 
-class ItemListContainer extends Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-            
-    //     }
-    // }
-    
-    render() { 
-        return (
-            <div>
-                <h1>{this.props.greeting}</h1>
-                <ItemCount 
-                    stock={5}
-                    initial={1}
-                />
-            </div>
-        )
-    }
+export default function ItemListContainer({greeting}) {
+    const [products, setProducts] = useState([]);
+    console.log("Los productos del array son:", products);
+
+    useEffect(() => {
+        getProducts
+        .then(res => setProducts(res))
+        .catch(error => alert("Ocurrió un error:", error))
+    },[])
+
+    return (
+        <div>
+            <h1>{greeting}</h1>
+            <ItemCount 
+                stock={5}
+                initial={1}
+            />
+            <ItemList
+                products={products}
+            />
+        </div>
+    )
 }
- 
-export default ItemListContainer;
 
