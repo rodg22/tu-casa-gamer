@@ -23,7 +23,7 @@ export default function Item({title, description, price, pictureUrl}) {
         {description}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        US$ {price}
+        <b>US$ {price}</b>
         </Typography>
       </CardContent>
       <CardActions>

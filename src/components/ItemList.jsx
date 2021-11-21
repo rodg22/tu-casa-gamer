@@ -1,10 +1,16 @@
+import LoadItems from '../services/LoadItems'
 import Item from "./Item";
 
 export default function ItemList({products}) {
     console.log("productos del ItemList", products)
     return (
-        <div class="itemList">
-            {products.map(product => {
+        <div className="itemList" style={{ display: 'flex', flexWrap: "wrap", justifyContent: "space-between"}}>
+            {products.length === 0 ?
+            <LoadItems
+            animation="wave"
+          />
+            :
+            products.map(product => {
                 return(
                 <Item
                     key={product.id}
