@@ -1,9 +1,9 @@
-const itemsData = [
+const data = [
     {
         "id":1,
         "pictureUrl":"https://assets.nintendo.com/image/upload/b_white,c_pad,f_auto,h_382,q_auto,w_573/ncom/es_LA/hardware/switch/nintendo-switch-neon-new-package/gallery/image01?v=2021111513",
         "title":"Nintendo Switch",
-        "description": "switch",
+        "description": "Nintendo Switch es una consola desmontable, que puede usarse en modo portátil, sobremesa o en la TV; esto te brindará la posibilidad de utilizarla donde quieras y compartir sus controles. Los Joy-con cuentan con botones especiales para realizar print de pantalla. Además, posee una cámara infrarroja que puede leer la distancia respecto a los objetos e incluso detectar formas. Adaptada a tus necesidades. Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 32 GB. Por otro lado, tiene puerto USB y salida HDMI, que permiten conectar accesorios y cargar la batería de tu control mientras jugás.",
         "category":"Consolas",
         "price": "400",
         "stock": "10"
@@ -46,11 +46,10 @@ const itemsData = [
     }
 ]
 
-const getProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(itemsData)
-        reject("Falló la promesa.");
+const getProducts = new Promise((resolve)=>{
+    setTimeout(()=>{
+        resolve(data)
     }, 2000)
-});
+})
 
-export default getProducts;
+export default getProducts

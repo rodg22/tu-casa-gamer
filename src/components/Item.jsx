@@ -5,10 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
-export default function Item({title, description, price, pictureUrl}) {
+export default function Item({id, title, description, price, pictureUrl, stock}) {
+  
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, minWidth: 300, marginBottom: 5 }}>
       <CardMedia
         component="img"
         height="140"
@@ -19,16 +22,18 @@ export default function Item({title, description, price, pictureUrl}) {
         <Typography gutterBottom variant="h5" component="div">
         {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-        {description}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        <b>US$ {price}</b>
+        <Typography gutterBottom variant="h6" component="div">
+        US$ {price}
         </Typography>
       </CardContent>
+      <ItemCount
+      stock={stock}
+      initial={1}
+      />
       <CardActions>
-        <Button size="small">Agregar al carrito</Button>
-        <Button size="small">Ver detalle</Button>
+        <Link to={`/item/${id}`} style={{textDecoration: "none"}}>
+          <Button size="small">Ver detalle</Button>
+        </Link>
       </CardActions>
     </Card>
   );

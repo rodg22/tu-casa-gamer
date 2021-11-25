@@ -1,25 +1,25 @@
 import {useState, useEffect} from "react";
-import getProducts from '../services/ItemPromise'
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
+import axios from 'axios';
 
 export default function ItemListContainer({greeting}) {
     const [products, setProducts] = useState([]);
-    console.log("Los productos del array son:", products);
+
+    const getProducts = async () => {
+        const getAxios = await axios.get('../JSON/DataList.json');
+        const responseAxios = getAxios.data;
+        setProducts(responseAxios);
+    }
 
     useEffect(() => {
-        getProducts
-        .then(res => setProducts(res))
-        .catch(error => alert("Ocurrió un error:", error))
+        setTimeout( () => {
+            getProducts()
+        }, 2000)
     },[])
 
     return (
         <div>
             <h1>{greeting}</h1>
-            <ItemCount 
-                stock={5}
-                initial={1}
-            />
             <ItemList
                 products={products}
             />
