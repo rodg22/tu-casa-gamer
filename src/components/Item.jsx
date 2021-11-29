@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 
-export default function Item({id, title, description, price, pictureUrl, stock}) {
+export default function Item({id, title, price, pictureUrl, stock}) {
   
   return (
     <Card sx={{ maxWidth: 345, minWidth: 300, marginBottom: 5 }}>

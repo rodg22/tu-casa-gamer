@@ -1,0 +1,65 @@
+/*====== NavBar ======*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    border: 1px solid #262626;
+}
+
+.logo {
+    width: 115px;
+}
+
+/*====== ItemListContainer ======*/
+
+.titulos-H1 {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    margin: 50px 0;
+}
+
+/*====== ItemDetail ======*/
+
+.item-detail {
+    font-family: Roboto, sans-serif;
+}
+
+.item-detail-container {
+    display: flex;
+}
+
+.item-detail-child1 {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.item-detail-child2 {
+    text-align: left;
+    flex-grow: 4;
+}
+
+.item-detail-child2 h2{
+    margin: 40px 0;
+}
+
+.item-detail-child2 h3{
+    margin-bottom: 40px;
+}
+
+.item-detail-child2 .stock{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.description {
+    padding: 40px;
+}
+
+.description p{
+    margin: 20px 0 40px;
+}

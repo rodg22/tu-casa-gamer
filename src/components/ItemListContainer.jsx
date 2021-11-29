@@ -11,15 +11,15 @@ export default function ItemListContainer({greeting}) {
         setProducts(responseAxios);
     }
 
-    useEffect(() => {
-        setTimeout( () => {
-            getProducts()
-        }, 2000)
-    },[])
-
+     useEffect(() => {
+        setTimeout(() => 
+            getProducts(),
+            2000);
+    }, []);
+    
     return (
         <div>
-            <h1>{greeting}</h1>
+            <h1 className="titulos-H1">{greeting}</h1>
             <ItemList
                 products={products}
             />

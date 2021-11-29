@@ -12,6 +12,7 @@ export default function ItemList({products}) {
             products.map(product => {
                 return(
                 <Item
+                    key={product.id}
                     id={product.id}
                     category={product.category}
                     title={product.title}
