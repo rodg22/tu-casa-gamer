@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function ItemDetail({item}) {
     const { title, price, pictureUrl, description, stock } = item;
 
-    const [quantityToAdd, setQuantityToAdd] = useState()
+    const [quantityToAdd, setQuantityToAdd] = useState();
 
     const onAdd = (quantity) => {
       setQuantityToAdd(quantity);
@@ -25,15 +25,15 @@ export default function ItemDetail({item}) {
               {quantityToAdd === undefined ?
                 <ItemCount stock={stock} initial={1} onAdd={onAdd} />
                 :
-                <>
+                <div className="div-agregaste">
                   <p>Agregaste {quantityToAdd} {title} al carrito</p>
                   <Link to="/cart">
-                    <button>Finalizar compra</button>
+                    <button className="boton-finalizar">Finalizar compra</button>
                   </Link>
                   <Link to="/">
-                    <button>Seguir comprando</button>
+                    <button className="boton-volver">Seguir comprando</button>
                   </Link>
-                </>
+                </div>
               }
             </div>
             <p className="stock">Stock: {stock}</p>

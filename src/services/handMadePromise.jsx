@@ -52,6 +52,60 @@ const data = [
         "category":"ACCESORIOS",
         "price": "50",
         "stock": "4"
+    },
+    {
+        "id":7,
+        "pictureUrl":"https://playmania438.com.ar/wp-content/uploads/2019/05/joystick-ps4-dualshock-4-original-sony-joy-ps4-color-negro-d_nq_np_751211-mla20491441051_112015-o1-8158da221044f702fc15381633450716-1024-1024-1.jpg",
+        "title":"Joystick PS4",
+        "description": "Control inalambrico de Sony Playstation 4.",
+        "category":"ACCESORIOS",
+        "price": "30",
+        "stock": "15"
+    },
+    {
+        "id":8,
+        "pictureUrl":"https://planetagames.com.ar/wp-content/uploads/2018/11/Pro-Controller-Nintendo-Switch-Front-WEB.jpg",
+        "title":"Joystick Pro Controller",
+        "description": "Control inalambrico de Nintendo Switch. Larga duracion de bateria.",
+        "category":"ACCESORIOS",
+        "price": "50",
+        "stock": "3"
+    },
+    {
+        "id":9,
+        "pictureUrl":"https://spacegamer.com.ar/img/Public/1058-producto-ac47b587-f68f-4286-9c16-fc460ede1044-8217.jpg",
+        "title":"Joystick Xbox",
+        "description": "Control inalambrico de Xbox series S.",
+        "category":"ACCESORIOS",
+        "price": "40",
+        "stock": "6"
+    },
+    {
+        "id":10,
+        "pictureUrl":"https://cdn.pccomponentes.com/blog/gaming/ps4pro.jpg",
+        "title":"PS4 Pro",
+        "description": "Borra los límites de la realidad con la consola PlayStation® 4 Pro. Más rápido, más potente y con juegos en un televisor 4K.",
+        "category":"CONSOLAS",
+        "price": "400",
+        "stock": "12"
+    },
+    {
+        "id":11,
+        "pictureUrl":"https://i.etsystatic.com/18319927/r/il/b2b140/2346285245/il_570xN.2346285245_ooco.jpg",
+        "title":"Mario kart 8 Deluxe",
+        "description": "Mario kart 8 deluxe: Vuelve a disfrutar de un exito de wii u ahora en tu Nintendo Switch.",
+        "category":"JUEGOS",
+        "price": "30",
+        "stock": "5"
+    },
+    {
+        "id":12,
+        "pictureUrl":"https://m.media-amazon.com/images/I/512qDElt0RL.jpg",
+        "title":"Resident evil 8 PS5",
+        "description": "Resident Evil 8 quiere mostrar las distintas caras del terror en una aldea repleta de peligros, bajo el yugo de cuatro jerarcas (Lady Dimitrescu, Moreau, Donna Benaviento, Heisenberg) y una gran villana con un objetivo que no destriparemos, Madre Miranda, pero que conecta directamente con Chris y con toda la saga.",
+        "category":"JUEGOS",
+        "price": "50",
+        "stock": "3"
     }
 ]
 

@@ -21,7 +21,7 @@ export default function ItemCount({stock, initial, onAdd}){
             setContador(qty)
         };
     };
-
+    
     return(
         <>
             <CardActions>

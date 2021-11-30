@@ -64,6 +64,34 @@ header {
     margin: 20px 0 40px;
 }
 
+.div-agregaste {
+    text-align: center;
+}
+
+.boton-finalizar {
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    border: 1px solid green;
+}
+
+.boton-volver {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    border: 1px solid blue;
+}
+
+.boton-volver:hover, .boton-finalizar:hover {
+    cursor: pointer;
+}
+
 /*====== Item ======*/
 
 .card-item {
