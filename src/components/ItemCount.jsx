@@ -3,7 +3,7 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
 
-export default function ItemCount({stock, initial}){
+export default function ItemCount({stock, initial, onAdd}){
     
     const [contador, setContador] = useState(initial);
 
@@ -22,11 +22,6 @@ export default function ItemCount({stock, initial}){
         };
     };
 
-    const onAdd = () => {
-        const message = `Agregaste ${contador} item`;
-        (contador > 1) ? alert(`${message}s`) : alert(message);
-      };
-
     return(
         <>
             <CardActions>
@@ -35,7 +30,7 @@ export default function ItemCount({stock, initial}){
                 <Button onClick={sumar} size="small">+</Button>
             </CardActions>
             <CardActions>
-                <Button onClick={onAdd} size="small">Agregar al carrito</Button>
+                <Button onClick={() => onAdd(contador)} size="small">Agregar al carrito</Button>
             </CardActions>
         </>
     )

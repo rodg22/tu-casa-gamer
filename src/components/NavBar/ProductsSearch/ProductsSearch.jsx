@@ -46,16 +46,12 @@ const Search = styled('div')(({ theme }) => ({
 
 function ProductSearch() {
     return (
-        <Search
-            sx={{mx: 2}}>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Buscar…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+        <Search sx={{mx: 2}}>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase placeholder="Buscar…" inputProps={{ 'aria-label': 'search' }} />
+        </Search>
     );
 }
 

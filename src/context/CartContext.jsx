@@ -1,6 +1,6 @@
-// import { useState, createContext } from 'react';
+import { createContext } from 'react';
 
-// export const CartContext = createContext();
+export const CartContext = createContext();
 
 // export const ThemeProvider = ({children}) => {
 //     const [isDarkMode, setIsDarkMode] = useState(false);

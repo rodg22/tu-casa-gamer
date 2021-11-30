@@ -1,25 +1,26 @@
 import {useState, useEffect} from "react";
 import ItemList from './ItemList';
-import axios from 'axios';
+import getProducts from "../services/handMadePromise";
+import { useParams } from "react-router-dom";
 
 export default function ItemListContainer({greeting}) {
     const [products, setProducts] = useState([]);
+    const { categoryId } = useParams();
 
-    const getProducts = async () => {
-        const getAxios = await axios.get('../JSON/DataList.json');
-        const responseAxios = getAxios.data;
-        setProducts(responseAxios);
-    }
-
-     useEffect(() => {
-        setTimeout(() => 
-            getProducts(),
-            2000);
-    }, []);
+    useEffect(() => {
+        getProducts
+        .then((res) => {
+            setProducts(res.filter(productos => {
+                if(categoryId === undefined) return productos;
+                return productos.category === categoryId;
+            }))
+        })
+        .catch(err => err);
+      }, [categoryId]);
     
     return (
         <div>
-            <h1 className="titulos-H1">{greeting}</h1>
+            <h1 className="titulos-H1">{greeting}{categoryId}</h1>
             <ItemList
                 products={products}
             />

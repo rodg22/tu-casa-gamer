@@ -19,7 +19,7 @@ header {
 .titulos-H1 {
     font-family: Roboto, sans-serif;
     text-align: center;
-    margin: 50px 0;
+    margin: 55px 0;
 }
 
 /*====== ItemDetail ======*/
@@ -62,4 +62,15 @@ header {
 
 .description p{
     margin: 20px 0 40px;
+}
+
+/*====== Item ======*/
+
+.card-item {
+    transform: scale(1);
+    transition: transform .5s !important;
+}
+
+.card-item:hover {
+    transform: scale(0.95)
 }
