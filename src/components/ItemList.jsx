@@ -1,11 +1,11 @@
-import LoadItems from '../services/LoadItems'
+import Loader from '../services/Loader'
 import Item from "./Item";
 
 export default function ItemList({products}) {
     return (
         <div className="itemList" style={{ display: 'flex', flexWrap: "wrap", justifyContent: "space-around" }}>
             {products.length === 0 ?
-            <LoadItems
+            <Loader
             animation="wave"
           />
             :

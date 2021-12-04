@@ -52,7 +52,7 @@ Media.propTypes = {
   loading: PropTypes.bool,
 };
 
-export default function LoadItems() {
+export default function Loader() {
   return (
     <Box sx={{ overflow: 'hidden' }}>
       <Media loading />
