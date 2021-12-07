@@ -1,7 +1,10 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
+import Badge from '@mui/material/Badge';
 
 const CartWidget = () => {
+
     return ( 
         <IconButton
             size="large"
@@ -10,7 +13,11 @@ const CartWidget = () => {
             aria-label="menu"
             sx={{ ml: 2 }}
         >
-            <ShoppingCartIcon />
+            <Link to="/cart" style={{textDecoration: "none", color: "white"}}>
+                <Badge badgeContent={4} color="primary">
+                    <ShoppingCartIcon />
+                </Badge>
+            </Link>
         </IconButton>
     );
 }

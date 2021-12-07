@@ -8,8 +8,8 @@ export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     const addItem = (item) => {
-    setCart([...cart, {key: item.quantity, item: item}]);
-    console.log(`Agregaste ${item.quantity} ${item.title}`);
+    setCart([...cart, item]);
+    console.log(`Agregaste ${item.quantity} ${item.title} ${JSON.stringify(item)}`);
     };
 
   const CartContextValues = {
@@ -22,4 +22,3 @@ export const CartProvider = ({ children }) => {
             {children}
           </CartContext.Provider>);
 };
-  

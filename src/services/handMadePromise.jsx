@@ -10,7 +10,7 @@ const data = [
     },
     {
         "id":2,
-        "pictureUrl":"https://images.fravega.com/f500/e24171063a6f9d21eb89c7d9eae6bc5a.jpg",
+        "pictureUrl":"https://www.perozzi.com.ar/24465-large_default/sony-play-station-5-hw-cfi-1015a-standard-1-joystick-c-juego-ratchet-and-clank-342080620.jpg",
         "title":"Playstation 5",
         "description": "Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos. PlayStation renovó las expectativas del mundo virtual con esta nueva consola y su gran rendimiento. Cuenta con una interfaz de usuario más rápida y fácil de navegar que en anteriores modelos. Además, podrás jugar durante horas desafiando a millones de contrincantes alrededor del mundo que esperan nuevos retos.",
         "category":"CONSOLAS",

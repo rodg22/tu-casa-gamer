@@ -35,7 +35,7 @@ export default function ItemDetail({item}) {
                 <div className="div-agregaste">
                   <p>Agregaste {quantityToAdd} {title} al carrito</p>
                   <Link to="/cart">
-                    <button className="boton-finalizar">Finalizar compra</button>
+                    <button className="boton-carrito">Ir al carrito</button>
                   </Link>
                   <Link to="/">
                     <button className="boton-volver">Seguir comprando</button>
