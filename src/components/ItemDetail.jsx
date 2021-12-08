@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {useCart} from '../context/CartContext';
 
 export default function ItemDetail({item}) {
-    const { id, pictureUrl, title, description, category, price, stock } = item;
+    const { pictureUrl, title, description, price, stock } = item;
 
     const [quantityToAdd, setQuantityToAdd] = useState();
 

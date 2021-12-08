@@ -9,6 +9,7 @@ import CartWidget from './CartWidget/CartWidget';
 import ProductSearch from './ProductsSearch/ProductsSearch';
 import LeftMenu from './LeftMenu/LeftMenu';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 const NavBar = () =>  {
 
@@ -21,6 +22,8 @@ const NavBar = () =>  {
   const handleSidebarClose = () => {
     changeOpenLeftMenu(false);
   };
+
+  const { countItems } = useCart();
 
   return (
     <>
@@ -41,7 +44,10 @@ const NavBar = () =>  {
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <ProductSearch style={{alignContent: "flex-end"}}/>
+          {countItems() > 0 ?
           <CartWidget/>
+          :
+          null}
         </Toolbar>
       </AppBar>
       <LeftMenu 

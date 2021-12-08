@@ -1,12 +1,11 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const Cart = () => {
 
-    const { cart } = useCart();
+    const { cart, removeItem, clear, cartTotal } = useCart();
 
     return cart.length > 0 ? (
         <div>
@@ -15,28 +14,28 @@ const Cart = () => {
                 <span>Subtotal</span>
             </div>
             {cart.map((item) => (
-                <div className="item-cart-container">
+                <div key={item.title} className="item-cart-container">
                     <div className="item-cart-image"><img src={item.pictureUrl} alt={item.title} /></div>
                     <div className="item-cart-quantity">
                         <div>{item.title}</div>
-                        <div>US$ {item.price}</div>
-                        <div>{item.quantity}</div>
+                        <div>US$ {item.price}  X  {item.quantity}</div>
                     </div>
                     <div className="item-cart-price">US$ {(item.price)*(item.quantity)}</div>
-                    <div className="item-cart-delete"><DeleteIcon /></div>
+                    <div className="item-cart-delete"><DeleteIcon onClick={() => removeItem(item.id)}/></div>
                 </div>
             ))}
             <div className="item-cart-footer">
-                <span>Total:</span>
+                <span>Total: US$ {cartTotal()}</span>
             </div>
             <button className="boton-finalizar">Finalizar compra</button>
+            <button className="boton-vaciar" onClick={() => clear()}>Vaciar carrito</button>
         </div>
     )
     :
-    (<>
-        <h1>AUN NO AGREGASTE ITEMS AL CARRITO</h1>
-        <Link to="/">Volver a comprar</Link>
-    </>)
+    (<div className="cart-vacio">
+        <h1>AÚN NO AGREGASTE ITEMS AL CARRITO</h1>
+        <div className="cart-vacio-home"><Link to="/">Volver a comprar</Link></div>
+    </div>)
 }
 
 export default Cart;

@@ -2,8 +2,11 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
+import { useCart } from '../../../context/CartContext';
 
 const CartWidget = () => {
+
+    const { countItems } = useCart();
 
     return ( 
         <IconButton
@@ -14,7 +17,7 @@ const CartWidget = () => {
             sx={{ ml: 2 }}
         >
             <Link to="/cart" style={{textDecoration: "none", color: "white"}}>
-                <Badge badgeContent={4} color="primary">
+                <Badge badgeContent={countItems()} color="primary">
                     <ShoppingCartIcon />
                 </Badge>
             </Link>

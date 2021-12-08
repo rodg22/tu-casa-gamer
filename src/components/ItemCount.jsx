@@ -30,7 +30,7 @@ export default function ItemCount({stock, initial, onAdd}){
                 <Button onClick={sumar} size="small">+</Button>
             </CardActions>
             <CardActions>
-                <Button onClick={() => onAdd(contador)} size="small">Agregar al carrito</Button>
+                <Button onClick={() => onAdd(contador)} size="small" className="boton-agregar">Agregar al carrito</Button>
             </CardActions>
         </>
     )
