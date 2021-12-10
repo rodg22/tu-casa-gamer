@@ -1,21 +1,33 @@
 import {useState, useEffect} from "react";
 import ItemList from './ItemList';
-import getProducts from "../services/handMadePromise";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 export default function ItemListContainer({greeting}) {
     const [products, setProducts] = useState([]);
     const { categoryId } = useParams();
-
+    
     useEffect(() => {
-        getProducts
-        .then((res) => {
-            setProducts(res.filter(productos => {
-                if(categoryId === undefined) return productos;
-                return productos.category === categoryId;
-            }))
-        })
-        .catch(err => err);
+        const db = getFirestore();
+        const itemsCollectionRef = collection(db, "items");
+
+        function getProducts(itemsCollectionQuery) {
+            getDocs(itemsCollectionQuery)
+                .then((snapshot) => {
+                    setProducts(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+                })
+                .catch(err => err)
+        }
+        
+        if (categoryId === undefined) {
+            getProducts(itemsCollectionRef)
+        } else {
+            const q = query(
+                itemsCollectionRef,
+                where("category", "==", `${categoryId}`)
+            )
+            getProducts(q)
+        }
       }, [categoryId]);
     
     return (
