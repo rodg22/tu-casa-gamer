@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ErrorPage from './components/ErrorPage';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart';
+import Form from './components/Form';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/category/:categoryId" element={<ItemListContainer />}/>
             <Route exact path="/item/:itemId" element={<ItemDetailContainer />}/>
             <Route exact path="/cart" element={<Cart />}/>
+            <Route exact path="/form" element={<Form />}/>
             <Route exact path="*" element={<ErrorPage />}/>
           </Routes>
         </BrowserRouter>

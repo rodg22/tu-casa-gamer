@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const db = getFirestore();
-    const switchRef = doc(db, "items", `${itemId}`)
+    const switchRef = doc(db, "items", itemId)
     getDoc(switchRef).then((snapshot) => {
     if (snapshot.exists()) {
       setItem({ ...snapshot.data(), id: snapshot.id });
