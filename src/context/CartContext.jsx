@@ -5,31 +5,31 @@ const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-  
   const [cart, setCart] = useState([]);
 
   const isInCart = (item) => {
-  return cart.some((cartItem) => cartItem.id === item.id);
+    return cart.some((cartItem) => cartItem.id === item.id);
   };
 
   const addItem = (item) => {
     if (isInCart(item)) {
-      let totalQuantity = item.quantity
-      const newCartItem = cart.map(cartItem => cartItem.id === item.id ?
-        { ...cartItem, quantity: totalQuantity += cartItem.quantity }
-        :
-        cartItem)
+      let totalQuantity = item.quantity;
+      const newCartItem = cart.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: (totalQuantity += cartItem.quantity) }
+          : cartItem
+      );
       setCart(newCartItem);
     } else {
       const newCartItem = [...cart, item];
       setCart(newCartItem);
     }
-  }
+  };
 
   const removeItem = (itemId) => {
-    const deleteItem = cart.filter((item) => item.id !== itemId)
+    const deleteItem = cart.filter((item) => item.id !== itemId);
     setCart(deleteItem);
-  }
+  };
 
   const clear = () => setCart([]);
 
@@ -57,7 +57,9 @@ export const CartProvider = ({ children }) => {
     cartTotal,
   };
 
-  return (<CartContext.Provider value={CartContextValues}>
-            {children}
-          </CartContext.Provider>);
+  return (
+    <CartContext.Provider value={CartContextValues}>
+      {children}
+    </CartContext.Provider>
+  );
 };

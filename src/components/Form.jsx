@@ -31,7 +31,7 @@ const inputs = [
 ];
 
 const Form = () => {
-  const { cart, cartTotal } = useCart();
+  const { cart, cartTotal, clear } = useCart();
 
   const [buyer, setBuyer] = useState({
     nombre: "",
@@ -43,9 +43,7 @@ const Form = () => {
     setBuyer({ ...buyer, [event.target.name]: event.target.value });
   };
   const ordenConfirmada = () => {
-    //1A-CHEQUEAR SI EL CARRITO TIENE ITEMS, SINO REDIRIGIR A HOME CON UN LINK
-    //1B-VACIAR CARRITO
-    //2B-REDIRIGIR A HOME LUEGO DE OPRIMIR OK
+    //2-REDIRIGIR A HOME LUEGO DE OPRIMIR OK
     const order = {
       buyer,
       items: cart,
@@ -71,6 +69,7 @@ const Form = () => {
         `N°orden: ${id}. Se enviaron los detalles de la compra a tu mail: ${buyer.mail}`,
         "success"
       );
+      clear();
     });
   };
 
@@ -78,7 +77,7 @@ const Form = () => {
     <>
       {cart.length === 0 ? (
         <div className="cart-vacio">
-          <h1>AÚN NO AGREGASTE ITEMS</h1>
+          <h1>¿Querés seguir comprando?</h1>
           <button className="cart-vacio-home">
             <Link to="/">Volver al catálogo</Link>
           </button>

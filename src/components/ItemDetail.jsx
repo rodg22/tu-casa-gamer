@@ -4,21 +4,32 @@ import ItemCount from "./ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import swal from "sweetalert";
 
 export default function ItemDetail({ item }) {
   const { pictureUrl, title, description, price, stock } = item;
 
   const [quantityToAdd, setQuantityToAdd] = useState();
 
-  const { addItem } = useCart();
+  const { addItem, cart } = useCart();
 
   const onAdd = (quantity) => {
-    const newItem = {
-      ...item,
-      quantity: quantity,
-    };
-    addItem(newItem);
-    setQuantityToAdd(quantity);
+    if (cart.map((cartItem) => cartItem.quantity) + quantity > stock) {
+      swal(
+        "Ingresá una cantidad menor",
+        `Los items en el carrito no deben superar el stock. Tenes ${cart.map(
+          (cartItem) => cartItem.quantity
+        )} ${title} en el carrito `,
+        "warning"
+      );
+    } else {
+      const newItem = {
+        ...item,
+        quantity: quantity,
+      };
+      addItem(newItem);
+      setQuantityToAdd(quantity);
+    }
   };
 
   return (
