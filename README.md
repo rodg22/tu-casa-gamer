@@ -1,11 +1,10 @@
 ------------------------------BREVE INTRODUCCION DEL PROYECTO------------------------------
 
-Se creo un eCommerce con React JS de una tienda de videojuegos y consolas: "TU CASA GAMER". La misma fue maquetada con libreria de Material UI y CSS puro (ya que algunos componentes de MUI facilitaron mucho el maquetado y estilado de la app).
+Se creo un eCommerce con React JS de una tienda de videojuegos y consolas: "TU CASA GAMER". La misma fue maquetada con libreria de Material UI y CSS puro (ya que algunos componentes de MUI facilitaron mucho el maquetado y estilado de la app). Para el mensaje final de compra se añadió sweetalert para confirmar la orden.
 
-El consumo de datos ,solicitados con get y mediante una promesa, se realiza a un archivo jsx interno llamado handPromise. En el cual ahi se encuentra el array de objetos (los datos) y la promesa con un setTimeout de 2 segundos simulando una demora en el servidor al solicitar los datos. En el mientras tanto se muestra un Skeleton de MUI para mostrarle al usuario que apareceran datos en esas cajas vacías(LoadItems).
+El consumo de datos fueron solicitados al servidor de google firebase. En esa base de datos se encuentran los items mostrados en este eCommerce y las respectivas ordenes a medida que se va comprando. Mientras recarga los items del servidor, se muestra un loader (Skeleton de MUI) para mostrarle al usuario que apareceran datos en esas cajas vacías(Loader).
 
-Se instalaron dependencias como react-router-dom para poder navegar entre componentes de una forma simple y eficiente. Hasta ahora se puede navegar al Home de la página(ItemListContainer), a las categorías de cada producto (ItemListContainer con params de cada category) y al detalle de cada producto(ItemDetail).
-
+Se instalaron dependencias como react-router-dom para poder navegar entre componentes de una forma simple y eficiente. Se puede navegar al Home de la página(ItemListContainer), a las categorías de cada producto (ItemListContainer con params de cada category), al detalle de cada producto(ItemDetail) y al carrito (Cart).
 
 ------------------------------COMENTARIOS DE REACT POR DEFAULT------------------------------
 
