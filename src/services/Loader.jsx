@@ -1,9 +1,9 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Skeleton from '@mui/material/Skeleton';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Skeleton from "@mui/material/Skeleton";
 
 const data = [];
 
@@ -29,7 +29,11 @@ function Media(props) {
               <Typography gutterBottom variant="body2">
                 {item.title}
               </Typography>
-              <Typography display="block" variant="caption" color="text.secondary">
+              <Typography
+                display="block"
+                variant="caption"
+                color="text.secondary"
+              >
                 {item.channel}
               </Typography>
               <Typography variant="caption" color="text.secondary">
@@ -54,7 +58,7 @@ Media.propTypes = {
 
 export default function Loader() {
   return (
-    <Box sx={{ overflow: 'hidden' }}>
+    <Box sx={{ overflow: "hidden" }}>
       <Media loading />
       <Media />
     </Box>
