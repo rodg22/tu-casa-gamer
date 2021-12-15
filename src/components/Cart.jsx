@@ -1,4 +1,5 @@
 import React from "react";
+import "./Cart.css";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";

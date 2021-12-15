@@ -1,3 +1,4 @@
+import "./NavBar.css";
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -7,7 +8,6 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CartWidget from "./CartWidget/CartWidget";
 import LeftMenu from "./LeftMenu/LeftMenu";
-import SearchBar from "./SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
@@ -57,7 +57,6 @@ const NavBar = () => {
               </Link>
             </Typography>
           </Box>
-          <SearchBar />
           {countItems() > 0 ? <CartWidget /> : null}
         </Toolbar>
       </AppBar>

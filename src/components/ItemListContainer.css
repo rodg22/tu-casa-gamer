@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulos-H1 {
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  margin: 55px 0;
+}

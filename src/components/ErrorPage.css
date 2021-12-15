@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*====== Error Page ======*/
+
+.errorPage {
+  margin: 20px auto;
+  width: 60%;
+  text-align: center;
+}
+
+.errorPage h1,
+.errorPage h2 {
+  margin: 10px auto;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+}
+
+.errorPage img {
+  width: 40%;
+  height: 40%;
+}
+
+.errorPage p {
+  margin: 30px auto;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+}
+
+.errorPage a {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  color: #262626;
+  display: block;
+  margin-bottom: 30px;
+}
