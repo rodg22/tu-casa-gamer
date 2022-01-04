@@ -4,7 +4,7 @@ Se creo un eCommerce con React JS de una tienda de videojuegos y consolas: "TU C
 
 El consumo de datos fueron solicitados al servidor de google firebase. En esa base de datos se encuentran los items mostrados en este eCommerce y las respectivas ordenes a medida que se va comprando. Mientras recarga los items del servidor, se muestra un loader (Skeleton de MUI) para mostrarle al usuario que apareceran datos en esas cajas vacías(Loader).
 
-Se instalaron dependencias como react-router-dom para poder navegar entre componentes de una forma simple y eficiente. Se puede navegar al Home de la página(ItemListContainer), a las categorías de cada producto (ItemListContainer con params de cada category), al detalle de cada producto(ItemDetail) y al carrito (Cart)...
+Se instalaron dependencias como react-router-dom para poder navegar entre componentes de una forma simple y eficiente. Se puede navegar al Home de la página(ItemListContainer), a las categorías de cada producto (ItemListContainer con params de cada category), al detalle de cada producto(ItemDetail) y al carrito (Cart).
 
 ------------------------------COMENTARIOS DE REACT POR DEFAULT------------------------------
 
