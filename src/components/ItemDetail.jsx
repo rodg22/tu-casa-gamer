@@ -38,13 +38,18 @@ export default function ItemDetail({ item }) {
               <CircularProgress sx={{}} />
             </Box>
           ) : (
-            <img src={`${pictureUrl}`} alt={`${pictureUrl}`} />
+            <img
+              className="item-image"
+              max-width="100%"
+              src={`${pictureUrl}`}
+              alt={`${pictureUrl}`}
+            />
           )}
         </div>
         <div className="item-detail-child2">
           <h2>{title}</h2>
           <h3>US$ {price}</h3>
-          <div>
+          <div className="item-count">
             {quantityToAdd === undefined ? (
               <ItemCount stock={stock} initial={1} onAdd={onAdd} />
             ) : (

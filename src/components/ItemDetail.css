@@ -12,6 +12,7 @@
 
 .item-detail-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .item-detail-child1 {
@@ -85,4 +86,26 @@
 .boton-volver a {
   background-color: blue;
   border: 1px solid blue;
+}
+
+@media (max-width: 1024px) {
+  .item-image {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .item-detail-child2 {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .item-count {
+    text-align: right;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .div-agregaste {
+    text-align: center;
+  }
 }

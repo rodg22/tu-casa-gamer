@@ -6,6 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 
 const Cart = () => {
   const { cart, removeItem, clear, cartTotal } = useCart();
+  console.log(cart);
   return cart.length > 0 ? (
     <div>
       <div className="item-cart-header">
